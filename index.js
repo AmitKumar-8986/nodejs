@@ -1,6 +1,32 @@
-const http = require('http');
+const colors=require('colors');
 
-http.createServer((req, resp)=>{
-    resp.write("<h1>Hello Amit</h1>");
-    resp.end();
-}).listen(8085);
+colors.setTheme({
+    silly: 'rainbow',
+    input: 'grey',
+    verbose: 'cyan',
+    prompt: 'grey',
+    info: 'green',
+    data: 'grey',
+    help: 'cyan',
+    warn: 'yellow',
+    debug: 'blue',
+    error: 'red'
+  });
+   
+  // outputs red text
+  console.log("this is an error".error);
+   
+  // outputs yellow text
+  console.log("this is a warning".warn);
+
+// outputs blue text
+console.log("this is an debug".debug);
+   
+// outputs cyan text
+console.log("this is a information".help);
+
+// outputs rainbow text
+console.log("this is an error".silly);
+   
+// outputs yellow text
+console.log("this is a warning".warn);
